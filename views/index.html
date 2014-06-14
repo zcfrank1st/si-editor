@@ -7,28 +7,31 @@
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="/public/stylesheets/style.css">
   <link rel="stylesheet" href="/public/stylesheets/lib/buttons.css">
+  <link rel="stylesheet" href="/public/stylesheets/lib/csshake.min.css">
 </head>
 
 <body>
   <div class="nav">
     <img src="/public/images/wigwam.png" />
     <div id="title-title">Si-Editor</div>
+    <div id="author">developed by zcfrank1st</div>
   </div>
   <div id="container">
     <div class="item">
-      <span class="button-dropdown" data-buttons="dropdown">
-    <a href="#" class="button button-rounded button-flat-primary"> 语言选择 <i class="fa fa-caret-down"></i></a>
+      <span class="button-dropdown" data-buttons="dropdown" id="chose-lan">
+        <a href="#" class="button button-rounded button-flat-primary"> 语言选择 <i class="fa fa-caret-down"></i></a>
  
-    <ul class="button-dropdown-menu-below">
-        <li><a href="#">SQL</a></li>
-        <li><a href="#">Javascript</a></li>
-    </ul>
-</span>
-      <a href="#" class="button button-3d-action button-pill">保存文件</a>
+        <ul class="button-dropdown-menu-below">
+          <li><a href="#">SQL</a></li>
+          <li><a href="#">Javascript</a></li>
+        </ul>
+      </span>
+      <a href="#" class="button button-3d-action button-pill shake shake-slow" id="save-file">保存文件</a>
     </div>
-    <div id="editor" class="item1">
+    <div class="item1" id="editor">
     </div>
   </div>
+  <!-- // TODO 使用 requirejs -->
   <script src="/public/javascripts/lib/jquery-1.11.1.min.js"></script>
   <script src="/public/javascripts/lib/freewall.js"></script>
   <script src="/public/javascripts/freewall-on.js"></script>
@@ -38,7 +41,7 @@
 
   <script>
     var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/xcode");
+    editor.setTheme("ace/theme/github");
     editor.setFontSize(14);
      //editor.setShowInvisibles(true);
      //    editor.getSession().setMode("ace/mode/sql");

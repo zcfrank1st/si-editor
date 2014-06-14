@@ -28,11 +28,8 @@ body {
 .item1 {
   width: 80%;
   height: 100%;
-}
-#editor {
-  border: 1px solid #000;
+  border: 1px solid #eae;
   border-radius: 10px;
-  border-bottom-right-radius: 0px;
 }
 img {
   width: 50px;
@@ -48,3 +45,8 @@ img {
   font-size: 20px;
   font-family: "times new roman";
 }
+#author {
+  float: right;
+  margin: 10px;
+}
+#chose-lan {} #save-file {}
